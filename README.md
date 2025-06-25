@@ -1,6 +1,6 @@
 # elecq-open-docs
 
-## OAuth2.0 Integration
+## OAuth2.0 Integration (Authorization Code Grant mode)
 
 ### 1. Information Required
 #### 1.1 Information to be Provided by the Partner
