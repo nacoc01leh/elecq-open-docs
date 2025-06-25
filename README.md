@@ -15,7 +15,7 @@ To ensure a smooth authorization process, the partner must provide the following
 #### 1.2 Information Provided by ELECQ
 ELECQ will provide the partner with the following:
 
-- ClientID
+- ClientID (If partner not provided)
   - A unique identifier for the client (e.g., client_12345).
 - ClientSecret
   - A secret key for the client (e.g., secret_67890). Keep this confidential.
