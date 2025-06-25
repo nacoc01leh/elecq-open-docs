@@ -91,7 +91,7 @@ All APIs (except "Authorize client-secret for authorizationCode") return respons
 ```
 
 #### Step 1: Obtain OAuth2 Authorization Code
-This API requires the following parameters in addition to the Authorization: Basic header:
+This API requires the following parameters in addition to the Authorization: 
 - `redirectUri`
   - The callback URL to which the user will be redirected after authorization. Must match the pre-registered URI. 
 - `clientId`
