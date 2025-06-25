@@ -20,18 +20,18 @@ ELECQ will provide the partner with the following:
 - ClientSecret
   - A secret key for the client (e.g., secret_67890). Keep this confidential.
 - AuthorizationCode
-  - A one-time-use temporary credential issued after user authorization. Used to exchange for an access_token.
+  - A one-time-use temporary credential issued after user authorization. Used to exchange for an `accessToken`.
 - AcessToken
   - A short-lived token (e.g., 1 day) granting access to protected resources. Must be included in API requests as a Bearer token.
 - RefreshToken
-  - A long-lived token (e.g., 7 day) used to obtain a new access_token without re-authenticating the user. Must be stored securely. 
+  - A long-lived token (e.g., 7 day) used to obtain a new `accessToken` without re-authenticating the user. Must be stored securely. 
 
 ---
 
 ### 2. Quick Start
 ***Note***: ELECQ uses the OAuth2 Authorization Code Grant mode. Ensure your implementation aligns with this flow. Key requirements:
 - All requests must use HTTPS.
-- The redirect_uri must match the pre-registered callback URL exactly.
+- The `redirectUri` must match the pre-registered callback URL exactly.
 
 [***API Docs***](https://www.postman.com/nacoc01leheq/workspace/elecq-open-api "API Docs")
 
@@ -42,21 +42,21 @@ Select the target environment before using the API docs.
 ![image](https://github.com/user-attachments/assets/75aa9369-cc0c-4f28-91cd-31d9c7a5df15)
 
 #### Check API List
-Currently, there are 5 open APIs available, as shown in the following figure:
+There are 5 open APIs available, as shown in the following figure:
 
 ![image](https://github.com/user-attachments/assets/b33c2f15-4205-4ea4-bf31-caf24b44a3ab)
 
 ***Notice***: All APIs in the "ELECQ OAuth2 APIs" Collection require HTTP ***Basic*** Authentication. You must include an Authorization header with: 
-- Type: Basic
-- Credentials: Base64-encoded ClientID:ClientSecret
+- Type: `Basic`
+- Credentials: Base64-encoded `ClientID:ClientSecret`
 
 ***Notice***: All APIs in the "ELECQ Merchant APIs" Collection require HTTP ***Bearer*** Authentication. You must include an Authorization header with: 
-- Type: Bearer
-- Token: Retrieve the access_token from the "Exchange authorizationCode for accessToken & refreshToken" endpoint.
+- Type: `Bearer`
+- Token: Retrieve the `accessToken` from the "Exchange authorizationCode for accessToken & refreshToken" endpoint.
 
 #### Standard API Response Format
 All APIs (except "Authorize client-secret for authorizationCode") return responses with:
-- Content-Type: application/json
+- Content-Type: `application/json`
 - Uniform structure:
 
 ```json
@@ -92,15 +92,15 @@ All APIs (except "Authorize client-secret for authorizationCode") return respons
 
 #### Step 1: Obtain OAuth2 Authorization Code
 This API requires the following parameters in addition to the Authorization: Basic header:
-- redirectUri
+- `redirectUri`
   - The callback URL to which the user will be redirected after authorization. Must match the pre-registered URI. 
-- clientId
+- `clientId`
   - The client identifier. Must match the ClientID used in the Authorization header.
-- responseType
+- `responseType`
   - Fixed value: "code" (for Authorization Code flow).
  
-Send a HTTP GET request, When successful, the API:
-- Redirects to the provided redirect_uri.
+Send a `HTTP GET` request, When successful, the API:
+- Redirects to the provided `redirectUri`.
 - Appends the authorization code as a query parameter:
 ```
 HTTP/1.1 302 Found
@@ -108,8 +108,8 @@ https://your-redirect-uri.com/callback?code=AUTHORIZATION_CODE
 ```
 
 #### Step 2: Exchanging Authorization Code for Tokens
-To obtain an access_token and refresh_token, send a HTTP POST request with:
-- Body (application/json):
+To obtain an `accessToken` and `refreshToken`, send a `HTTP POST` request with:
+- Body (`application/json`):
 
 ```json
 {
@@ -117,7 +117,7 @@ To obtain an access_token and refresh_token, send a HTTP POST request with:
 }
 ```
 
-- HTTP Response (application/json)
+- HTTP Response (`application/json`)
 
 ```json
 {
