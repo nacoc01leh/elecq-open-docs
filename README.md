@@ -121,7 +121,7 @@ To obtain an access_token and refresh_token, send a HTTP POST request with:
 
 ```json
 {
-    "respCode": "000000",
+    "respCode": "200",
     "respMsg": "success",
     "data": {
         "accessToken": "eyJ0eXAiOiJKV1QiLCJyYW5kb20iOiIyNTQ0OTQ1MyIsIm......",
