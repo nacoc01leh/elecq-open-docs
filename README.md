@@ -72,7 +72,7 @@ All APIs (except "Authorize client-secret for authorizationCode") return respons
 ```json
 {
   "respCode": "200",
-  "respMsg": "",
+  "respMsg": "success",
   "data": {
     "orderId": "12345",
     "status": "processing"
