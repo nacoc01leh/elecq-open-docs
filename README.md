@@ -113,7 +113,7 @@ To obtain an access_token and refresh_token, send a HTTP POST request with:
 
 ```json
 {
-  "authorizationCode": "AUTHORIZATION_CODE"  // Fetch in step 1
+  "authorizationCode": "AUTHORIZATION_CODE"  // Returned by step 1
 }
 ```
 
