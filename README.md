@@ -46,11 +46,11 @@ Currently, there are 5 open APIs available, as shown in the following figure:
 
 ![image](https://github.com/user-attachments/assets/b33c2f15-4205-4ea4-bf31-caf24b44a3ab)
 
-Notice: All APIs in the "ELECQ OAuth2 APIs" Collection require HTTP Basic Authentication. You must include an Authorization header with: 
+***Notice***: All APIs in the "ELECQ OAuth2 APIs" Collection require HTTP ***Basic*** Authentication. You must include an Authorization header with: 
 - Type: Basic
 - Credentials: Base64-encoded ClientID:ClientSecret
 
-Notice: All APIs in the "ELECQ Merchant APIs" Collection require HTTP Basic Authentication. You must include an Authorization header with: 
+***Notice***: All APIs in the "ELECQ Merchant APIs" Collection require HTTP ***Bearer*** Authentication. You must include an Authorization header with: 
 - Type: Bearer
 - Token: Retrieve the access_token from the "Exchange authorizationCode for accessToken & refreshToken" endpoint.
 
