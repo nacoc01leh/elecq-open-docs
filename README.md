@@ -26,6 +26,8 @@ ELECQ will provide the partner with the following:
 - RefreshToken
   - A long-lived token (e.g., 7 day) used to obtain a new access_token without re-authenticating the user. Must be stored securely. 
 
+---
+
 ### 2. Quick Start
 ***Note***: ELECQ uses the OAuth2 Authorization Code Grant mode. Ensure your implementation aligns with this flow. Key requirements:
 - All requests must use HTTPS.
@@ -52,6 +54,42 @@ Currently, there are 5 open APIs available, as shown in the following figure:
 - Type: Bearer
 - Token: Retrieve the access_token from the "Exchange authorizationCode for accessToken & refreshToken" endpoint.
 
+#### Standard API Response Format
+All APIs (except "Authorize client-secret for authorizationCode") return responses with:
+- Content-Type: application/json
+- Uniform structure:
+
+```json
+{
+  "respCode": "",      // Status code (e.g., "200", "400")
+  "respMsg": "",       // Status message (e.g., "success", "Unauthorized")  
+  "data": {}          // Business data (structure varies by API)
+}
+```
+
+- Success Response
+
+```json
+{
+  "respCode": "200",
+  "respMsg": "",
+  "data": {
+    "orderId": "12345",
+    "status": "processing"
+  }
+}
+```
+
+- Error Response
+
+```json
+{
+  "respCode": "401",
+  "respMsg": "Unauthorized",
+  "data": null
+}
+```
+
 #### Step 1: Obtain OAuth2 Authorization Code
 This API requires the following parameters in addition to the Authorization: Basic header:
 - redirectUri
@@ -60,10 +98,37 @@ This API requires the following parameters in addition to the Authorization: Bas
   - The client identifier. Must match the ClientID used in the Authorization header.
 - responseType
   - Fixed value: "code" (for Authorization Code flow).
-When successful, the API:
+ 
+Send a HTTP GET request, When successful, the API:
 - Redirects to the provided redirect_uri.
 - Appends the authorization code as a query parameter:
 ```
 HTTP/1.1 302 Found
 https://your-redirect-uri.com/callback?code=AUTHORIZATION_CODE
+```
+
+#### Step 2: Exchanging Authorization Code for Tokens
+To obtain an access_token and refresh_token, send a HTTP POST request with:
+- Body (application/json):
+
+```json
+{
+  "authorizationCode": "AUTHORIZATION_CODE"  // Fetch in step 1
+}
+```
+
+- HTTP Response (application/json)
+
+```json
+{
+    "respCode": "000000",
+    "respMsg": "success",
+    "data": {
+        "accessToken": "eyJ0eXAiOiJKV1QiLCJyYW5kb20iOiIyNTQ0OTQ1MyIsImFsZyI6IkhTMjU2In0.eyJpc3MiOiJlbGVjcSIsImF1ZCI6InRva2VuIiwiVVNFUl9JRCI6IjEwOTY0NTE1MiIsImlhdCI6MTc1MDgzNTkzMiwiZXhwIjoxNzUwOTIyMzMyLCJuYmYiOjE3NTA4MzU5MzJ9.4wUeksJVOI0COubPVUZTmjjFKYk-_aQuCOpy68MkCM0",
+        "refreshToken": "eyJ0eXAiOiJKV1QiLCJyYW5kb20iOiIyMTkyNzQxNyIsImFsZyI6IkhTMjU2In0.eyJpc3MiOiJlbGVjcSIsImF1ZCI6InJlZnJlc2hUb2tlbiIsIlVTRVJfSUQiOiIxMDk2NDUxNTIiLCJpYXQiOjE3NTA4MzU5MzIsImV4cCI6MTc1MTQ0MDczMiwibmJmIjoxNzUwODM1OTMyfQ.ZIDfqTnA6pOUSQny75xnWjxqVdaMhrm-_AnU1IR1iNo",
+        "tokenType": "Bearer",
+        "accessTokenExpiresIn": 86400,
+        "refreshTokenExpiresIn": 604800
+    }
+}
 ```
