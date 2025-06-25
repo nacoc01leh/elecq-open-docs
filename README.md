@@ -124,8 +124,8 @@ To obtain an access_token and refresh_token, send a HTTP POST request with:
     "respCode": "000000",
     "respMsg": "success",
     "data": {
-        "accessToken": "eyJ0eXAiOiJKV1QiLCJyYW5kb20iOiIyNTQ0OTQ1MyIsImFsZyI6IkhTMjU2In0.eyJpc3MiOiJlbGVjcSIsImF1ZCI6InRva2VuIiwiVVNFUl9JRCI6IjEwOTY0NTE1MiIsImlhdCI6MTc1MDgzNTkzMiwiZXhwIjoxNzUwOTIyMzMyLCJuYmYiOjE3NTA4MzU5MzJ9.4wUeksJVOI0COubPVUZTmjjFKYk-_aQuCOpy68MkCM0",
-        "refreshToken": "eyJ0eXAiOiJKV1QiLCJyYW5kb20iOiIyMTkyNzQxNyIsImFsZyI6IkhTMjU2In0.eyJpc3MiOiJlbGVjcSIsImF1ZCI6InJlZnJlc2hUb2tlbiIsIlVTRVJfSUQiOiIxMDk2NDUxNTIiLCJpYXQiOjE3NTA4MzU5MzIsImV4cCI6MTc1MTQ0MDczMiwibmJmIjoxNzUwODM1OTMyfQ.ZIDfqTnA6pOUSQny75xnWjxqVdaMhrm-_AnU1IR1iNo",
+        "accessToken": "eyJ0eXAiOiJKV1QiLCJyYW5kb20iOiIyNTQ0OTQ1MyIsIm......",
+        "refreshToken": "eyJ0eXAiOiJKV1QiLCJyYW5kb20iOiIyMTkyNzQxNyIsImFs......",
         "tokenType": "Bearer",
         "accessTokenExpiresIn": 86400,
         "refreshTokenExpiresIn": 604800
