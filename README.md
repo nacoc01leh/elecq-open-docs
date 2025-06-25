@@ -36,7 +36,9 @@ Note: Our system strictly uses the OAuth2 Authorization Code Grant mode. Ensure 
 [API Docs](https://www.postman.com/nacoc01leheq/workspace/elecq-open-api "API Docs")
 
 ##### Select Environment
+
 Select the target environment before using the API docs.
+
 ![image](https://github.com/user-attachments/assets/75aa9369-cc0c-4f28-91cd-31d9c7a5df15)
 
 ##### Check API List
