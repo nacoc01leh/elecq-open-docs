@@ -104,7 +104,7 @@ Send a `HTTP GET` request, When successful, the API:
 - Appends the authorization code as a query parameter:
 ```
 HTTP/1.1 302 Found
-https://your-redirect-uri.com/callback?code=AUTHORIZATION_CODE
+location: https://your-redirect-uri.com/callback?code=AUTHORIZATION_CODE
 ```
 
 #### Step 2: Exchanging Authorization Code for Tokens
