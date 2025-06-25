@@ -9,7 +9,7 @@ To ensure a smooth authorization process, the partner must provide the following
   - A unique identifier for the partner (e.g., Example Org).
 - Custom ClientID (Optional)
   - Partners may suggest a custom ClientID; if not provided, ELECQ will generate a default one.
-- Redirect URI (Authorized Callback Address)
+- Redirect URL (Authorized Callback Address)
   - The URL users are redirected to after authorization (e.g., https://example.com/callback?authorizationCode=exampleAuthorizationCode).
 
 #### 1.2 Information Provided by ELECQ
