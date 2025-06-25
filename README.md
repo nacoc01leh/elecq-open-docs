@@ -30,4 +30,4 @@ ELECQ will provide the partner with the following:
 Note: Our system strictly uses the OAuth2 Authorization Code Grant mode. Ensure your implementation aligns with this flow. Key requirements:
 - All token requests must use HTTPS.
 - The redirect_uri must match the pre-registered callback URL exactly.
-[API Docs]("https://www.postman.com/nacoc01leheq/workspace/elecq-open-api")
+[API Docs](https://www.postman.com/nacoc01leheq/workspace/elecq-open-api "API Docs")
