@@ -26,22 +26,20 @@ ELECQ will provide the partner with the following:
 - RefreshToken
   - A long-lived token (e.g., 7 day) used to obtain a new access_token without re-authenticating the user. Must be stored securely. 
 
-### 2. API Integration
-Note: Our system strictly uses the OAuth2 Authorization Code Grant mode. Ensure your implementation aligns with this flow. Key requirements:
-- All token requests must use HTTPS.
+### 2. Quick Start
+***Note***: ELECQ uses the OAuth2 Authorization Code Grant mode. Ensure your implementation aligns with this flow. Key requirements:
+- All requests must use HTTPS.
 - The redirect_uri must match the pre-registered callback URL exactly.
 
-#### 2.1 Quick Start
+[***API Docs***](https://www.postman.com/nacoc01leheq/workspace/elecq-open-api "API Docs")
 
-[API Docs](https://www.postman.com/nacoc01leheq/workspace/elecq-open-api "API Docs")
-
-##### Select Environment
+#### Select Environment
 
 Select the target environment before using the API docs.
 
 ![image](https://github.com/user-attachments/assets/75aa9369-cc0c-4f28-91cd-31d9c7a5df15)
 
-##### Check API List
+#### Check API List
 Currently, there are 5 open APIs available, as shown in the following figure:
 
 ![image](https://github.com/user-attachments/assets/b33c2f15-4205-4ea4-bf31-caf24b44a3ab)
@@ -54,5 +52,5 @@ Currently, there are 5 open APIs available, as shown in the following figure:
 - Type: Bearer
 - Token: Retrieve the access_token from the "Exchange authorizationCode for accessToken & refreshToken" endpoint.
 
-##### Step 1: Obtain OAuth2 Authorization Code
+#### Step 1: Obtain OAuth2 Authorization Code
 
