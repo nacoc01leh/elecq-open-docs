@@ -53,4 +53,17 @@ Currently, there are 5 open APIs available, as shown in the following figure:
 - Token: Retrieve the access_token from the "Exchange authorizationCode for accessToken & refreshToken" endpoint.
 
 #### Step 1: Obtain OAuth2 Authorization Code
-
+This API requires the following parameters in addition to the Authorization: Basic header:
+- redirectUri
+  - The callback URL to which the user will be redirected after authorization. Must match the pre-registered URI. 
+- clientId
+  - The client identifier. Must match the ClientID used in the Authorization header.
+- responseType
+  - Fixed value: "code" (for Authorization Code flow).
+When successful, the API:
+- Redirects to the provided redirect_uri.
+- Appends the authorization code as a query parameter:
+```
+HTTP/1.1 302 Found
+https://your-redirect-uri.com/callback?code=AUTHORIZATION_CODE
+```
