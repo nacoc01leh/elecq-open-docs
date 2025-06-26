@@ -132,3 +132,11 @@ To obtain an `accessToken` and `refreshToken`, send a `HTTP POST` request with:
     }
 }
 ```
+
+#### Step3: Querying using the Merchant API
+
+##### Device Page List
+
+
+##### User Page List
+
