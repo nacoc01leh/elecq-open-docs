@@ -133,7 +133,7 @@ To obtain an `accessToken` and `refreshToken`, send a `HTTP POST` request with:
 }
 ```
 
-#### Step3: Querying using the Merchant API
+#### Step3: Querying using Merchant API with Bearer Access Token
 
 ##### Device Page List
 [***Example & Description***](https://www.postman.com/nacoc01leheq/elecq-open-api/example/34486419-55fc5dd7-6f45-44dc-92ae-bd146c2f0791?action=share&source=copy-link&creator=34486419&ctx=documentation)
