@@ -135,8 +135,17 @@ To obtain an `accessToken` and `refreshToken`, send a `HTTP POST` request with:
 
 #### Step3: Querying using the Merchant API
 
+##### Authorize client-secret for authorizationCode
+[***Example & Description***](https://www.postman.com/nacoc01leheq/elecq-open-api/example/34486419-a4b6fc8e-6eb2-479b-a29b-aa805279179d?action=share&source=copy-link&creator=34486419&ctx=documentation)
+
+##### Exchange authorizationCode for accessToken & refreshToken
+[***Example & Description***](https://www.postman.com/nacoc01leheq/elecq-open-api/example/34486419-8de87d27-795e-4505-a053-fe71dd8b6298?action=share&source=copy-link&creator=34486419&ctx=documentation)
+
+##### Refresh access token
+[***Example & Description***](https://www.postman.com/nacoc01leheq/elecq-open-api/example/34486419-fab641e8-ebd9-4e9d-8527-d356ba235150?action=share&source=copy-link&creator=34486419&ctx=documentation)
+
 ##### Device Page List
-[***API Example & Description***](https://www.postman.com/nacoc01leheq/elecq-open-api/example/34486419-55fc5dd7-6f45-44dc-92ae-bd146c2f0791?action=share&source=copy-link&creator=34486419&ctx=documentation)
+[***Example & Description***](https://www.postman.com/nacoc01leheq/elecq-open-api/example/34486419-55fc5dd7-6f45-44dc-92ae-bd146c2f0791?action=share&source=copy-link&creator=34486419&ctx=documentation)
 
 ##### User Page List
-[***API Example & Description***](https://www.postman.com/nacoc01leheq/elecq-open-api/example/34486419-5dac1f71-b73b-4fe2-ace6-9f654045b149?action=share&source=copy-link&creator=34486419&ctx=documentation)
+[***Example & Description***](https://www.postman.com/nacoc01leheq/elecq-open-api/example/34486419-5dac1f71-b73b-4fe2-ace6-9f654045b149?action=share&source=copy-link&creator=34486419&ctx=documentation)
