@@ -24,7 +24,11 @@ ELECQ will provide the partner with the following:
 - AcessToken
   - A short-lived token (e.g., 1 day) granting access to protected resources. Must be included in API requests as a Bearer token.
 - RefreshToken
-  - A long-lived token (e.g., 7 day) used to obtain a new `accessToken` without re-authenticating the user. Must be stored securely. 
+  - A long-lived token (e.g., 7 day) used to obtain a new `accessToken` without re-authenticating the user. Must be stored securely.
+ 
+### 1.3 Get AuthorzationCode Directly
+If you cannot provide a callback webhook URL, There is an another API to get authorization code directly:
+[***Authorize client-secret for AuthorizationCode Directly***](https://www.postman.com/nacoc01leheq/workspace/elecq-open-api/example/34486419-767f1173-6fb0-4d12-b628-fbeb2ee1f9f4?action=share&source=copy-link&creator=34486419&active-environment=0e930f3c-eb1c-45c6-8b24-933e0071201e)
 
 ---
 
