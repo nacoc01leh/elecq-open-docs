@@ -25,15 +25,10 @@ ELECQ will provide the partner with the following:
   - A short-lived token (e.g., 1 day) granting access to protected resources. Must be included in API requests as a Bearer token.
 - RefreshToken
   - A long-lived token (e.g., 7 day) used to obtain a new `accessToken` without re-authenticating the user. Must be stored securely.
- 
-### 2. Get AuthorzationCode Directly
-If you cannot provide a callback URL, There is an another API to get authorization code directly:
-
-[***Authorize client-secret for AuthorizationCode Directly***](https://www.postman.com/nacoc01leheq/workspace/elecq-open-api/example/34486419-767f1173-6fb0-4d12-b628-fbeb2ee1f9f4?action=share&source=copy-link&creator=34486419&active-environment=0e930f3c-eb1c-45c6-8b24-933e0071201e)
 
 ---
 
-### 3. Quick Start
+### 2. Quick Start
 ***Note***: ELECQ uses the OAuth2 Authorization Code Grant mode. Ensure your implementation aligns with this flow. Key requirements:
 - All requests must use HTTPS.
 - The `redirectUri` must match the pre-registered callback URL exactly.
@@ -111,6 +106,11 @@ Send a `HTTP GET` request, When successful, the API:
 HTTP/1.1 302 Found
 location: https://your-redirect-uri.com/callback?code=AUTHORIZATION_CODE
 ```
+
+#### Get AuthorzationCode Directly
+If you cannot provide a callback URL, There is an another API to get authorization code directly:
+
+[***Authorize client-secret for AuthorizationCode Directly***](https://www.postman.com/nacoc01leheq/workspace/elecq-open-api/example/34486419-767f1173-6fb0-4d12-b628-fbeb2ee1f9f4?action=share&source=copy-link&creator=34486419&active-environment=0e930f3c-eb1c-45c6-8b24-933e0071201e)
 
 #### Step 2: Exchanging Authorization Code for Tokens
 To obtain an `accessToken` and `refreshToken`, send a `HTTP POST` request with:
