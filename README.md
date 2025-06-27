@@ -108,7 +108,7 @@ location: https://your-redirect-uri.com/callback?code=AUTHORIZATION_CODE
 ```
 
 #### Get AuthorzationCode Directly
-If you cannot provide a callback URL, There is an another API to get authorization code directly:
+If you cannot provide a callback URL, There is another API to get authorization code directly:
 
 [***Authorize client-secret for AuthorizationCode Directly***](https://www.postman.com/nacoc01leheq/workspace/elecq-open-api/example/34486419-767f1173-6fb0-4d12-b628-fbeb2ee1f9f4?action=share&source=copy-link&creator=34486419&active-environment=0e930f3c-eb1c-45c6-8b24-933e0071201e)
 
