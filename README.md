@@ -33,7 +33,7 @@ If you cannot provide a callback URL, There is an another API to get authorizati
 
 ---
 
-### 2. Quick Start
+### 3. Quick Start
 ***Note***: ELECQ uses the OAuth2 Authorization Code Grant mode. Ensure your implementation aligns with this flow. Key requirements:
 - All requests must use HTTPS.
 - The `redirectUri` must match the pre-registered callback URL exactly.
