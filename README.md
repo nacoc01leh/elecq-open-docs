@@ -145,3 +145,9 @@ To obtain an `accessToken` and `refreshToken`, send a `HTTP POST` request with:
 
 ##### User Page List
 [***Example & Description***](https://www.postman.com/nacoc01leheq/elecq-open-api/example/34486419-5dac1f71-b73b-4fe2-ace6-9f654045b149?action=share&source=copy-link&creator=34486419&ctx=documentation)
+
+##### Get Single Device's Data
+[***Example & Description***](https://www.postman.com/nacoc01leheq/workspace/elecq-open-api/example/34486419-61cc057f-ae51-424b-b06c-99e83cc4c727?action=share&source=copy-link&creator=34486419&active-environment=0e930f3c-eb1c-45c6-8b24-933e0071201e)
+
+##### Get Single User's Data
+[***Example & Description***](https://www.postman.com/nacoc01leheq/workspace/elecq-open-api/example/34486419-a84e6bc3-982a-4490-b687-8188dbf256fb?action=share&source=copy-link&creator=34486419&active-environment=0e930f3c-eb1c-45c6-8b24-933e0071201e)
